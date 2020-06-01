@@ -6,9 +6,9 @@
 
 //Bucket Configurations
 
- var bucketName = BUCKET_NAME;
- var bucketRegion = BUCKET_REGION;
- var IdentityPoolId = IDENTITY_POOL_ID;
+ var bucketName = 'designevaluation';
+ var bucketRegion = 'eu-central-1';
+ var IdentityPoolId = 'eu-central-1:d627b383-0cd2-498e-b6a1-3d0c5e78c7d3';
 
  AWS.config.update({
                 region: bucketRegion,
@@ -43,8 +43,8 @@
                 {
                     var file = files[0];
                     var fileName = file.name;
-                    var filePath = 'my-first-bucket-path/' + fileName;
-                    var fileUrl = 'https://' + BUCKET_REGION + '.amazonaws.com/my-first-bucket/' +  filePath;
+                    var filePath = 'boundary_conditions/' + fileName;
+                    var fileUrl = 'https://' + 'eu-central-1' + '.amazonaws.com/' +  filePath;
             
                     s3.upload({
                                     Key: filePath,
